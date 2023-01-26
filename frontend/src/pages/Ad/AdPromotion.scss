@@ -1,0 +1,115 @@
+@use '../../sass/Variables' as *;
+
+section.ad {
+  .container {
+    background: $white-color;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    padding: 1em;
+  }
+  .ad-home-img {
+    position: relative;
+    height: 200px;
+    background-image: url('../../images/advertising.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 15px;
+    overflow: hidden;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.548);
+    }
+    &::after {
+      content: 'إنشاء إعلان';
+      position: absolute;
+      font: {
+        weight: Bold;
+        size: 30px;
+      }
+      color: $silver-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 35%;
+      right: 0;
+      width: 250px;
+      height: 30%;
+      background-color: $sky-color;
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1em;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 15px;
+      font: {
+        weight: Bold;
+        size: 1em;
+      }
+      padding: 0.3em;
+      background: $white-color;
+      color: $petrol-color;
+      border-radius: 3px;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        color: $white-color;
+        background: $petrol-color;
+      }
+      &.active {
+        background: $petrol-color;
+        color: $white-color;
+        &:hover {
+          background: $petrol-color;
+          color: $white-color;
+        }
+      }
+    }
+  }
+  section {
+    display: none;
+    &.active {
+      display: block;
+    }
+    .prev-btn,
+    .next-btn {
+      display: inline-block;
+      margin: 5px;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 8px;
+      font: {
+        weight: Bold;
+        size: 1em;
+      }
+      background: $petrol-color;
+      border: none;
+      width: 150px;
+      padding: 1em;
+      &:hover {
+        background: $main-color !important;
+        color: $silver-color;
+      }
+    }
+    span.warning-text {
+      color: $red-color;
+      font: {
+        weight: Bold;
+        size: 10px;
+      }
+      word-spacing: 3px;
+    }
+  }
+}

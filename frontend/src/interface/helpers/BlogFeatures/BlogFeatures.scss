@@ -1,0 +1,121 @@
+@use '../../../sass/Variables' as *;
+
+.blog-features {
+  margin-top: 50px;
+  background-color: $white-color;
+  overflow: hidden;
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  @media screen and (max-width: 776px) {
+    margin: 28px auto;
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    border: 2px solid $silver-color;
+    background: $white-color;
+    border-radius: 8px;
+  }
+  .go-to-blog-page-btn {
+    &:hover {
+      text-decoration: underline;
+    }
+    &.showUp {
+      transform: translateX(0);
+    }
+  }
+  .title {
+    text-align: center;
+    h1 {
+      display: inline-block;
+      font-weight: bold;
+      font-size: 40px;
+      margin: 0 0 15px 0;
+      line-height: 1.5;
+      position: relative;
+      border-bottom: 5px solid $main-color;
+      border-radius: 6px;
+      color: black;
+    }
+  }
+  .col-item {
+    .blog-card {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.5s ease-in-out;
+
+      border-radius: 8px;
+      .card-img {
+        img {
+          width: 178.39px;
+          height: 178.39px;
+          transition: all 0.5s ease-in-out;
+          width: 100%;
+        }
+      }
+      &:hover {
+        > .card-img {
+          img {
+            transform: scale(1.8);
+            filter: blur(1px);
+          }
+        }
+        z-index: 9;
+        transform: scale(1.1);
+        .info-container {
+          bottom: 0;
+        }
+      }
+      .info-container {
+        transition: all 0.3s ease-in-out;
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.548);
+        color: $silver-color;
+        font-weight: bold;
+        z-index: 3;
+      }
+    }
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .new {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0.1em;
+      width: 40px;
+      height: 30px;
+      color: $white-color;
+      background: $red-color;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .watches {
+      position: absolute;
+      top: 37px;
+      right: 0;
+      width: fit-content;
+      padding-right: 5px;
+      padding-left: 5px;
+      height: 30px;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      background-color: $sky-color;
+      color: $white-color;
+    }
+  }
+}

@@ -1,0 +1,241 @@
+@use '../../../sass/Variables' as *;
+
+.real-state-features {
+  margin-top: 50px;
+  background-color: $white-color;
+  overflow: hidden;
+  @media screen and (max-width: 776px) {
+    margin: 28px auto;
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    border: 2px solid $silver-color;
+    background: $white-color;
+    border-radius: 8px;
+  }
+  .go-to-real-state-page-btn {
+    transition: transform 2s linear;
+    text-decoration: none;
+    transform: translateX(50%);
+    &:hover {
+      text-decoration: underline;
+    }
+    &.showUp {
+      transform: translateX(0);
+    }
+  }
+  .title {
+    text-align: center;
+    h1 {
+      display: inline-block;
+      font-weight: bold;
+      font-size: 40px;
+      margin: 0 0 15px 0;
+      line-height: 1.7;
+      position: relative;
+      border-bottom: 5px solid $main-color;
+      border-radius: 6px;
+      color: black;
+      @media screen and (max-width: 768px){
+        font-size: 15px;
+      }
+    }
+  }
+
+  .col-item {
+    .real-state-card {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.5s ease-in-out;
+      border-radius: 8px;
+      .card-img {
+        img {
+          width: 278.39px;
+          height: 278.39px;
+          transition: all 0.5s ease-in-out;
+          width: 100%;
+          filter: blur(0.1px);
+          &:hover {
+            transform: scale(1.1);
+            filter: blur(0);
+          }
+        }
+      }
+
+      .card-info {
+        transition: all 0.3s ease-in-out;
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.548);
+        color: $silver-color;
+        font-weight: bold;
+        padding: 0.3em 1em;
+        font-size: 13px;
+        overflow: hidden;
+        p {
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+        z-index: 3;
+      }
+      .info-container {
+        transition: all 0.3s linear;
+        padding: 0.5em;
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+        background-color: rgba(0, 0, 0, 0.767);
+        text-overflow: ellipsis;
+        overflow: hidden;
+        .state {
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+        a {
+          text-decoration: none;
+          color: $white-color;
+          font: {
+            weight: Bold;
+            size: 1.3em;
+          }
+          &:hover {
+            color: $main-color;
+          }
+        }
+        p {
+          font-size: 13px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+      .action-btn {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 10px;
+        > .edit {
+          color: $main-color;
+          transition: all 0.2s linear;
+          cursor: pointer;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+
+        > .delete {
+          color: $red-color;
+          transition: all 0.2s linear;
+          cursor: pointer;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &:hover .info-container {
+      bottom: 0;
+    }
+
+    .new {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0.1em;
+      width: 40px;
+      height: 30px;
+      color: $white-color;
+      background: $red-color;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .country {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0.3em 1em;
+      width: auto;
+      max-width: 200px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      height: 30px;
+      color: $white-color;
+      background: $light-green-color;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .sale,
+    .rent {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0.1em;
+      width: 40px;
+      height: 30px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .sale {
+      color: $white-color;
+      background: $red-color;
+    }
+
+    .rent {
+      color: $sky-color;
+      background: $yellow-color;
+    }
+    .sold,
+    .rented {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0.1em;
+      width: 140px;
+      height: 40px;
+      font-weight: bold;
+      text-align: center;
+      color: $red-color;
+      background: #56ab2f; /* fallback for old browsers */
+      background: -webkit-linear-gradient(
+        to right,
+        #a8e063,
+        #56ab2f
+      ); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(
+        to right,
+        #a8e063,
+        #56ab2f
+      ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+    .urgent {
+      position: absolute;
+      top: 37px;
+      right: 0;
+      width: 60px;
+      height: 30px;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      background-color: $sky-color;
+      color: $white-color;
+    }
+  }
+}

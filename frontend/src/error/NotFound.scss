@@ -1,0 +1,23 @@
+@use '../sass/Variables' as *;
+
+.not-found {
+  position: relative;
+  height: 50vh;
+  .not-found-text {
+    .caution {
+      color: red;
+      font-weight: bold;
+      svg {
+        font-size: 2em;
+      }
+    }
+
+    background: $white-color;
+    padding: 1em;
+    border-radius: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

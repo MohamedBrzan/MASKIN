@@ -1,0 +1,320 @@
+@use '../../../sass/Variables' as *;
+
+.real-state-details {
+  margin: 30px auto;
+  position: relative;
+  overflow: hidden;
+  .img-collections {
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 8px;
+
+    .img-row {
+      margin: 0;
+      transition: all 0.5s ease-in-out;
+      border: 1px solid #e6e6e6;
+      &:hover {
+        transform: scale(1.04);
+      }
+    }
+
+    .collection {
+      margin: 0;
+      padding: 0;
+      .img-1 {
+        width: 100%;
+        position: relative;
+
+        img {
+          width: 100%;
+        }
+        // &:hover {
+        //   .mini-info {
+        //     bottom: 0;
+        //   }
+      }
+    }
+
+    .img-group {
+      width: calc(100% - 10px);
+      overflow: hidden;
+      img {
+        width: 100%;
+        &:first-of-type {
+          margin-bottom: 11px;
+          margin-left: 1px;
+        }
+      }
+    }
+  }
+  ul.info {
+    display: inline-flex;
+    position: absolute;
+    z-index: 2;
+    top: 30px;
+    left: 150px;
+
+    @media screen and (max-width: 768px) {
+      display: block;
+      left: 0px;
+    }
+
+    li {
+      text-transform: capitalize;
+      background-color: $white-color;
+      color: $dark-color;
+      &.open {
+        background-color: $light-green-color;
+        color: $white-color;
+      }
+      &.new {
+        color: blue;
+      }
+      &.rent {
+        color: green;
+      }
+      &.sale {
+        color: green;
+      }
+      &.urgent {
+        color: rgb(128, 0, 0);
+      }
+      border-radius: 8px;
+      margin: 5px;
+      padding: 1px 5px;
+      font-weight: bold;
+      font-size: 12px;
+    }
+  }
+  ul.actions {
+    display: inline-flex;
+    position: absolute;
+    z-index: 2;
+    top: 30px;
+    right: 150px;
+
+    @media screen and (max-width: 768px) {
+      display: block;
+      right: 0px;
+    }
+    li {
+      text-transform: capitalize;
+      background-color: $white-color;
+      color: $dark-color;
+      border-radius: 8px;
+      margin: 5px;
+      padding: 1px 5px;
+      font-weight: bold;
+      font-size: 12px;
+    }
+  }
+  p.icon {
+    background-color: $silver-color;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 2px;
+    font-weight: bold;
+    position: absolute;
+    top: 80px;
+    right: 160px;
+    @media screen and (max-width: 768px) {
+      display: block;
+      top: 100px;
+      right: 10px;
+    }
+  }
+}
+.real-state-info {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  .mini-info {
+    transition: all 0.5s ease-in-out;
+    word-wrap: break-word;
+    background: $white-color;
+    border: 2px solid $silver-color;
+    border-radius: 30px;
+
+    .general-sec {
+      padding: 0;
+      font-size: 15px;
+      color: $main-color;
+      padding: 3em;
+      color: $petrol-color;
+    }
+  }
+
+  .heads-info {
+    word-break: break-all;
+    margin-top: 50px;
+    .title {
+      font-weight: bold;
+      font-size: 20px;
+      color: $main-color;
+    }
+    .price {
+      display: inline-block;
+      padding: 0.5em 1.5em;
+      margin-top: 15px;
+      font-weight: bold;
+      color: $orange-color;
+      background-color: $dark-color;
+    }
+  }
+  form {
+    background-color: $petrol-color;
+    padding: 1em;
+    border-radius: 8px;
+
+    .contact-title {
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      color: $main-color;
+      background-color: $silver-color;
+      padding: 0.3em;
+      border-radius: 3px;
+      margin-bottom: 15px;
+    }
+
+    @media screen and (max-width: 776px) {
+      margin-top: 15px;
+    }
+    input {
+      margin: 0 0 25px 0;
+    }
+    button {
+      margin-top: 20px;
+      border: none;
+      width: 100%;
+      &:hover {
+        background-color: $main-color;
+      }
+    }
+  }
+  .description {
+    word-break: break-all;
+  }
+}
+
+.real-state-info-title,
+.analytics-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: inline-block;
+  padding: 0.3em 1em;
+  transition: all 0.2s ease-in-out;
+}
+.real-state-info-title {
+  background-color: $petrol-color;
+  color: $silver-color;
+}
+.analytics-title {
+  background-color: $lime-color;
+  color: $petrol-color;
+}
+
+.all-real-state-details {
+  .all-details {
+    height: 100%;
+    .details {
+      background-color: $white-color;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      margin-bottom: 15px;
+      &.toggle-show.hide {
+        display: none;
+      }
+
+      .title {
+        background: $silver-color;
+        padding: 0.5em 1em;
+        font-weight: bold;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        font-size: 16px;
+        color: $dark-color;
+      }
+      .description {
+        padding: 0.5em 1em;
+        color: $sky-color;
+        .info-title {
+          color: $dark-color;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 1.5;
+          margin-bottom: 5px;
+        }
+        ul {
+          display: inline-flex;
+        }
+        .info {
+          color: $dark-color;
+        }
+      }
+    }
+  }
+  .see-more-btn {
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid $sky-color;
+    padding: 0.2em;
+    font-weight: bold;
+    color: $sky-color;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      background-color: $silver-color;
+      color: $petrol-color;
+    }
+  }
+}
+
+.affordability-form {
+  border: 3px solid $silver-color;
+  background: #ece9e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ffffff,
+    #ece9e6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #ece9e6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  padding: 1em;
+  border-radius: 8px;
+  label {
+    color: $silver-color;
+    background: #41295a; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #2f0743,
+      #41295a
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #2f0743,
+      #41295a
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 0.1em 0.5em;
+    border-radius: 4px;
+
+    font: {
+      weight: Bold;
+      size: 18px;
+    }
+  }
+}
+
+span.info {
+  font: {
+    weight: Bold;
+    size: 15px;
+  }
+}

@@ -1,0 +1,64 @@
+@use './sass/Variables' as *;
+
+.App {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  min-height: 100vh;
+  position: relative;
+  user-select: none;
+
+  main {
+    flex: 1;
+    background-color: $white-color;
+  }
+
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .up-btn {
+    position: fixed;
+    bottom: 20px;
+    right: -50px;
+    z-index: 1;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: $orange-color;
+    color: $silver-color;
+    text-align: center;
+    padding: 5px;
+    transition: all 0.5s ease-in-out;
+    z-index: 999;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $white-color;
+  width: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $dark-color;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-button {
+  background-color: $dark-color;
+}

@@ -1,0 +1,38 @@
+@use '../sass/Variables' as *;
+.ads-sec {
+  overflow: hidden;
+  position: sticky;
+  top: 100px;
+  left: 5px;
+  margin: 15px auto;
+
+  // @media (min-width: 1280px) and (max-width: 1400px) {
+  //   left: 1px;
+  // }
+  // @media screen and (max-width: 776px) {
+  //   // position: relative;
+  //   // margin-bottom: 80px;
+  //   // width: 100%;
+  //   display: none;
+  // }
+  .timer {
+    background: $white-color;
+    padding: 0.3em;
+    border-radius: 5px;
+    border: 3px solid $silver-color;
+    border-bottom: 5px solid $petrol-color;
+    margin-bottom: 15px;
+    span {
+      margin: 0 1px;
+      color: $light-green-color;
+      &:not(:last-child)::after {
+        content: ' : ';
+        font: {
+          weight: Bold;
+          size: 1.3em;
+        }
+        color: $main-color;
+      }
+    }
+  }
+}

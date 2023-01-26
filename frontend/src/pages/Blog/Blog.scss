@@ -1,0 +1,214 @@
+@use '../../sass/Variables' as *;
+
+.blog {
+  overflow: hidden;
+  padding: 1em;
+  .search-title {
+    font: {
+      weight: Bold;
+      size: 25px;
+    }
+    color: $main-color;
+  }
+  .blog-header-img {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    background-image: url('../../images/img-12.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .blog-intro-text {
+      position: absolute;
+      padding: 0 3em;
+      margin-top: 50px;
+      background-color: $main-color;
+      display: inline-block;
+      font: {
+        weight: bold;
+        size: 30px;
+      }
+      color: $white-color;
+    }
+    .blog-modal {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: 0.3;
+    }
+  }
+
+  .col-item {
+    .blog-card {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.5s ease-in-out;
+
+      border-radius: 8px;
+      .card-img {
+        img {
+          width: 178.39px;
+          height: 178.39px;
+          transition: all 0.5s ease-in-out;
+          width: 100%;
+        }
+      }
+      &:hover {
+        > .card-img {
+          img {
+            transform: scale(1.8);
+            filter: blur(1px);
+          }
+        }
+        z-index: 9;
+        transform: scale(1.1);
+        .info-container {
+          bottom: 0;
+        }
+      }
+      .info-container {
+        transition: all 0.3s ease-in-out;
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.548);
+        color: $silver-color;
+        font-weight: bold;
+        z-index: 3;
+      }
+    }
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .new {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0.1em;
+      width: 40px;
+      height: 30px;
+      color: $white-color;
+      background: $red-color;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .watches {
+      position: absolute;
+      top: 37px;
+      right: 0;
+      width: fit-content;
+      padding-right: 5px;
+      padding-left: 5px;
+      height: 30px;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      background-color: $sky-color;
+      color: $white-color;
+    }
+  }
+
+  .blog-ads-title {
+    position: fixed;
+
+    font: {
+      weight: bold;
+      size: 30px;
+    }
+    text-align: center;
+  }
+  .submit-btn {
+    background: $petrol-color;
+    &:hover {
+      background: $main-color !important;
+      border: none;
+    }
+  }
+  .blog-show {
+    background: $white-color;
+    padding: 0.5em;
+    margin: 30px auto;
+    border: 1px solid $main-color;
+    border-radius: 8px;
+    .feature-blog,
+    .recent-blog {
+      .title {
+        background: $yellow-color;
+        padding: 0.5em;
+        border-radius: 5px;
+        border: 1px solid $sky-color;
+      }
+      .blog {
+        &:not(:last-child) {
+          border-bottom-width: 1px;
+          border-bottom-style: solid;
+          border-bottom-color: rgba(0, 0, 0, 0.144);
+        }
+      }
+    }
+  }
+  .search-input {
+    @media screen and (max-width: 990px) {
+      margin-bottom: 15px;
+    }
+    @media screen and (min-width: 991px) {
+      width: 50%;
+      margin: auto;
+    }
+  }
+}
+
+.blog-home-img {
+  position: relative;
+  width: 100;
+  height: 200px;
+  background-image: url('../../images/blog_1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 15px;
+  overflow: hidden;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.548);
+  }
+  &::after {
+    content: 'مــدونـــتـــى  ';
+    position: absolute;
+    font: {
+      weight: Bold;
+      size: 30px;
+    }
+    color: $silver-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 35%;
+    right: 0;
+    width: 250px;
+    height: 30%;
+    background-color: $main-color;
+  }
+}
+
+.slick-slider {
+  @media screen and (min-width: 778px) {
+    width: 1000px;
+    margin: auto;
+  }
+}

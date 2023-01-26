@@ -1,0 +1,67 @@
+@use '../../../sass/Variables' as *;
+
+.slick-slider {
+  .image-container {
+    position: relative;
+    .text {
+      transition: all 1s ease-in-out;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 75%;
+      background: white;
+      padding: 20px 50px;
+      z-index: 2;
+      text-align: end;
+      opacity: 0;
+      padding: 50px 0;
+      @media screen and (max-width: 768px) {
+        padding: 20px;
+        width: 100%;
+      }
+      .word {
+        font: {
+          weight: Bold;
+          size: 3em;
+        }
+        @media screen and (max-width: 768px) {
+          font: {
+            weight: Bold;
+            size: 1em;
+          }
+        }
+        color: $main-color;
+      }
+      &.active {
+        opacity: 1;
+        padding-right: 100px;
+        @media screen and (max-width: 768px) {
+          padding-right: 70px;
+        }
+      }
+    }
+  }
+  .home_slick_modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.4;
+    z-index: 1;
+  }
+  .slick-arrow {
+    display: none !important;
+  }
+}
+
+@keyframes infiniteAnime {
+  from {
+    margin: 0;
+  }
+
+  to {
+    margin: 50px;
+  }
+}

@@ -1,0 +1,61 @@
+@use '../../sass/Variables' as *;
+
+footer {
+  overflow: hidden;
+  background-color: $dark-color;
+  font-size: 12px;
+  color: $silver-color;
+  text-align: center;
+  div {
+    padding: 5px;
+  }
+  li {
+    padding: 5px;
+  }
+  .row {
+    padding: 2em;
+    > div {
+      padding: 30px;
+    }
+  }
+  h3 {
+    color: $main-color;
+    font: {
+      weight: Bold;
+      size: 1.5em;
+    }
+  }
+  .links {
+    @media screen and (max-width: 768px) {
+      margin-top: 15px;
+    }
+    a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: $orange-color;
+      font-size: 20px;
+      &:nth-child(1):hover {
+        color: $sky-color;
+      }
+      &:nth-child(2):hover {
+        color: $sky-color;
+      }
+      &:nth-child(3):hover {
+        color: $yellow-color;
+      }
+      &:nth-child(4):hover {
+        color: $sky-color;
+      }
+      &:nth-child(5):hover {
+        color: $red-color;
+      }
+      &:nth-child(6):hover {
+        color: $yellow-color;
+      }
+    }
+  }
+  .footer-down {
+    background: $modal-color;
+    padding: 2em;
+  }
+}

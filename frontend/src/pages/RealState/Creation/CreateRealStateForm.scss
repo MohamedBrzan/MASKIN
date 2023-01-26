@@ -1,0 +1,71 @@
+@use '../../../sass/Variables' as *;
+
+.create-real-state {
+  margin: 50px auto;
+  .title {
+    margin: 30px auto;
+    border-radius: 5px;
+    padding: 0.5em 1.3em;
+    background: $light-green-color;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+    font: {
+      weight: Bold;
+      size: 2em;
+    }
+    color: $main-color;
+    text-align: center;
+    user-select: none;
+  }
+  h3 {
+    background: $petrol-color;
+    color: $yellow-color;
+    margin: 30px auto;
+    font: {
+      weight: Bold;
+      size: 2em;
+    }
+    text-align: center;
+    padding: 0.5em;
+    border: {
+      radius: 8px;
+    }
+  }
+  .submit-btn {
+    border: none;
+    background: $yellow-color;
+    width: 100%;
+    padding: 0.9em;
+    margin: 30px auto;
+    font: {
+      weight: Bold;
+      size: 1em;
+    }
+    color: $petrol-color;
+    &:hover {
+      background: $main-color !important;
+      color: $silver-color;
+    }
+  }
+  .create-real-state-form {
+    border-radius: 8px;
+    padding: 2em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    label {
+      font: {
+        weight: Bold;
+        size: 1.2em;
+      }
+    }
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: 13px;
+  font: {
+    size: 50px;
+    weight: Bold;
+  }
+}

@@ -1,0 +1,34 @@
+@use '../../sass/Variables' as *;
+
+.contact-us {
+  .contact-us-title {
+    background: $petrol-color;
+    color: $orange-color;
+    padding: 0.5em;
+    text-align: center;
+    font: {
+      weight: Bold;
+      size: 2.5em;
+    }
+    p {
+      color: $yellow-color;
+      font: {
+        weight: Bold;
+        size: 1.5em;
+      }
+    }
+  }
+  form {
+    background: $orange-color;
+    padding: 1.5em;
+    border-radius: 8px;
+    margin: 30px auto;
+    button {
+      background: $main-color;
+      border: none;
+      &:hover {
+        background: $petrol-color;
+      }
+    }
+  }
+}
